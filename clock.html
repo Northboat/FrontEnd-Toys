@@ -28,8 +28,8 @@
 						<nav>
 							<ul>
 								<li><a href="#fuck">戒导大赛</a></li>
-								<li><a href="#round">轮次排名</a></li>
-								<li><a href="#history">历史最佳</a></li>
+								<li><a href="#history">谁是自律王</a></li>
+								<li><a href="#mark">备忘录</a></li>
 								<!--<li><a href="#elements">元素</a></li>-->
 							</ul>
 						</nav>
@@ -112,50 +112,6 @@
 
 						</article>
 
-						
-						<article id="round">
-							<h2 class="major">狠狠地开冲</h2>
-							<span class="image main"><img src="images/deft.jpg" alt="" /></span>
-							<h3 class="major">第一轮: 自律王 末末&nbsp;&nbsp;&nbsp;&nbsp;打胶王 俊逼</h3>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>姓名</th>
-											<th>成绩</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td id="past10"></td>
-											<td id="round10"></td>
-										</tr>
-										<tr>
-											<td id="past11"></td>
-											<td id="round11"></td>
-										</tr>
-										<tr>
-											<td id="past12"></td>
-											<td id="round12"></td>
-										</tr>
-										<tr>
-											<td id="past13"></td>
-											<td id="round13"></td>
-										</tr>
-										<tr>
-											<td id="past14"></td>
-											<td id="round14"></td>
-										</tr>
-										<tr>
-											<td id="past15"></td>
-											<td id="round15"></td>
-										</tr>
-										
-									</tbody>
-								</table>
-							</div>
-							<h3 class="major">第二轮: 尚未结束</h3>
-						</article>
 
 						<article id="history">
 							<h2 class="major">英灵殿</h2>
@@ -205,68 +161,16 @@
 								</table>
 							</div>
 						</article>
-
-
-
-						<article id="abandon">
-							<h2 class="major">背个单词先</h2>
-							<h3>用不了捏, 有服务器再港</h3>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">姓名</label>
-										<select name="name" id="name">
-											<option value="null" selected>请选择你的英雄</option>
-											<option value="xiong">熊爹</option>
-											<option value="momo">末狗</option>
-											<option value="jun">俊逼</option>
-											<option value="peng">彭奇</option>
-											<option value="dai">戴畜</option>
-											<option value="liu">刘狗</option>
-										</select>
-									</div>
-									<div class="field half">
-										<label for="count">背记单词数</label>
-										<input type="text" name="count" id="count" />
-									</div>
-									<div class="field">
-										<label for="message">备注</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Clock" class="primary" /></li>
-									<li><input type="reset" value="Reset" /></li>
-								</ul>
-							</form>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											
-											<th>Name</th>
-											<th>Today</th>
-											<th>Total</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>末狗</td>
-											<td>0 个</td>
-											<td>10000 个</td>
-										</tr>
-									</tbody>
-									<!-- <tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot> -->
-								</table>
-							</div>
+	
+	
+						<article id="mark">
+							<h2 class="major">备忘捏</h2>
+							<p>彭奇 陶末 2.11 滚</p>
+							<p>刘狗 14 滚</p>
+							<p>戴狗 16 滚</p>
 						</article>
-											
 						
+	
 						<article id="elements">
 							<h2 class="major">Elements</h2>
 
@@ -527,17 +431,14 @@
 				// 当前轮次排名
 				let name = ["熊爹", "戴狗", "刘狗", "彭奇", "末狗", "俊逼"]
 				// 开始时间戳，0表示未参加，-1表示已退赛
-				var start = [ -1, 1667320940895, 1667492603114, -1, 0, 0 ];
+				var start = [ -1, -1, -1, -1, 0, 0 ];
 				// 记录当前轮次已退赛的成绩，将变成下一轮的 round
-				let reco = [ "18 天 09 小时 28 分钟 10 秒", "", "", "05 天 14 小时 53 分钟 27 秒", "", "" ];
+				let reco = [ "18 天 09 小时 28 分钟 10 秒", "31 天 02 小时 39 分钟 44 秒", "28 天 02 小时 39 分钟 44 秒", "05 天 14 小时 53 分钟 27 秒", "", "" ];
 
 				// 历史最佳排名
-				let best_name = ["末末", "彭奇", "俊俊", "熊爹", "戴某", "刘帅"];
-				let best = [ "10 天 4 小时 0 分钟 0 秒", "10 天 0 小时 0 分钟 0 秒", "9 天 7 小时 0 分钟 0 秒", "尚无记录", "尚无记录", "尚无记录" ];
+				let best_name = ["戴某", "刘帅", "熊爹", "末末", "彭奇", "俊俊" ];
+				let best = [ "31 天 02 小时 39 分钟 44 秒", "28 天 02 小时 39 分钟 44 秒", "18 天 09 小时 28 分钟 10 秒", "10 天 4 小时 0 分钟 0 秒", "10 天 0 小时 0 分钟 0 秒", "9 天 7 小时 0 分钟 0 秒" ];
 				
-				// 第 i 轮排名
-				let round1_name = ["末狗", "彭奇", "俊逼", "熊爹", "戴畜", "刘狗"];
-				let round1 = [ "10 天 4 小时 0 分钟 0 秒", "10 天 0 小时 0 分钟 0 秒", "9 天 7 小时 0 分钟 0 秒", "未参战", "未参战", "未参战" ];
 				
 				function init(){
 					for(let i = 0; i < start.length; i++){
@@ -545,10 +446,6 @@
 						// 历史最佳名字和成绩
 						document.getElementById("best"+i).innerHTML = best_name[i];
 						document.getElementById("history"+i).innerHTML = best[i];
-
-						// 第一轮名字和成绩
-						document.getElementById("past1"+i).innerHTML = round1_name[i];
-						document.getElementById("round1"+i).innerHTML = round1[i];
 
 						// 当前轮次名字
 						document.getElementById("name"+i).innerHTML = name[i];
@@ -563,27 +460,6 @@
 				}
 
 				init();
-
-
-
-				// // 添加复制按钮
-				// var btn = document.getElementById('btn');
-    			// btn.addEventListener('click', function(){
-        		// 	var inputText = document.getElementById('end').value;
-        		// 	var currentFocus = document.activeElement;
-       			//  	inputText.focus();
-        		// 	inputText.setSelectionRange(0, inputText.value.length);
-        		// 	document.execCommand('copy', true);
-        		// 	currentFocus.focus();
-    			// });
-
-				// function copy() {
-      			// 	var input = document.getElementById("end");
-      			// 	input.focus(); // 选中文本
-      			// 	document.execCommand("copy", true); // 执行浏览器复制命令
-      			// 	alert("复制成功");
-    			// }
-
 
 				function getDiff(start) {
 					let cur = new Date().getTime();
