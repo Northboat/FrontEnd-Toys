@@ -28,7 +28,7 @@
 						<nav>
 							<ul>
 								<li><a href="#fuck">戒导大赛</a></li>
-								<li><a href="#history">谁是自律王</a></li>
+								<li><a href="#history">英灵殿</a></li>
 								<li><a href="#mark">备忘录</a></li>
 								<!--<li><a href="#elements">元素</a></li>-->
 							</ul>
@@ -165,9 +165,15 @@
 	
 						<article id="mark">
 							<h2 class="major">备忘捏</h2>
-							<p>彭奇 陶末 俊÷ 2.11 滚</p>
-							<p>刘狗 14 滚</p>
-							<p>戴狗 16 滚</p>
+							
+							<h3>考研倒计时</h3>
+							<h1 id="countdown"></h1>
+							
+							<h3>返校日</h3>
+							<p>彭奇 陶末 俊 2.11</p>
+							<p>刘狗 14</p>
+							<p>戴狗 16</p>
+													
 						</article>
 						
 	
@@ -429,7 +435,7 @@
 			<script>
 				
 				// 当前轮次排名
-				let name = ["熊狗", "戴某", "刘狗", "彭奇", "末狗", "俊÷"]
+				let name = ["熊狗", "戴某", "刘狗", "彭奇", "末狗", "俊畜"]
 				// 开始时间戳，0表示未参加，-1表示已退赛
 				var start = [ -1, -1, -1, -1, 0, 0 ];
 				// 记录当前轮次已退赛的成绩，将变成下一轮的 round
@@ -439,9 +445,14 @@
 				let best_name = ["戴某", "刘狗", "熊狗", "末狗", "彭奇", "俊÷" ];
 				let best = [ "31 天 02 小时 39 分钟 44 秒", "28 天 02 小时 39 分钟 44 秒", "18 天 09 小时 28 分钟 10 秒", "10 天 4 小时 0 分钟 0 秒", "10 天 0 小时 0 分钟 0 秒", "9 天 7 小时 0 分钟 0 秒" ];
 				
+				// 23/12/24 8
+				var d = 1703376000000;
 				
 				function init(){
 					for(let i = 0; i < start.length; i++){
+						
+						// 倒计时
+						setInterval(function(){countdown(d)}, 1000)
 						
 						// 历史最佳名字和成绩
 						document.getElementById("best"+i).innerHTML = best_name[i];
@@ -449,7 +460,8 @@
 
 						// 当前轮次名字
 						document.getElementById("name"+i).innerHTML = name[i];
-						// 当前轮次成绩
+						
+						// 实时成绩
 						// 若起始时间戳为0,未参赛
 						if(start[i] == 0){ document.getElementById("clock"+i).innerHTML = "未参赛"; }
 						// 若起始时间戳为-1，已退赛
@@ -458,6 +470,14 @@
 						else { setInterval(function(){myTimer(start[i], i)}, 1000); }
 					}
 				}
+				
+				function countdown(date){
+					let cur = new Date().getTime();
+					let diff = parseInt((date-cur) / (1000*60*60*24))
+					let content = document.getElementById("countdown").innerHTML
+					document.getElementById("countdown").innerHTML = diff + "天";					
+				}
+				
 
 				init();
 
