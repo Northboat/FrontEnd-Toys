@@ -91,7 +91,7 @@
 							<div>
 								<h2 class="major" for="start">你也要来打个∠吗</h3>
 								<label for="start">获取并复制时间戳，发给熊熊, 参加淫趴</label>
-								<input type="text" id="start"/>
+								<input type="text" id="start" placeholder="点击下方按钮获取时间戳"/>
 							</div><br>
 							<ul class="actions">
 								<li><input type="submit" value="狠狠地...插入我" class="primary" onclick="join()"/></li>
@@ -101,11 +101,10 @@
 							<div>
 								<h2 class="major" for="end">如果你打了∠</h3>
 								<label for="end">输入序号获取当前成绩, 退出淫趴</label>
-								<input type="text" id="end"/>
+								<input type="text" id="end" placeholder="在这输入序号并点击按钮获取成绩"/>
 								
 							</div><br>
 							<ul class="actions">
-								<li><input type="text" id="inquire" class="button small" placeholder="在这输入序号噢"/></li>
 								<li><input type="submit" value="射射, 已经谢了" onclick="exit()" class="primary small"/></li>
 								<!-- <input type="button" id="btn" class="button small" onclick="copy()" value="Copy"> -->
 							</ul>
@@ -168,11 +167,6 @@
 							
 							<h3>考研倒计时</h3>
 							<h1 id="countdown"></h1>
-							
-							<h3>返校日</h3>
-							<p>彭奇 陶末 俊 2.11</p>
-							<p>刘狗 14</p>
-							<p>戴狗 16</p>
 													
 						</article>
 						
@@ -500,7 +494,7 @@
 
 				function exit(){
 					console.log("hahaha");
-					let index = document.getElementById("inquire").value;
+					let index = document.getElementById("end").value;
 					let s = start[index];
 					if(s == 0){
 						document.getElementById("end").value = "未参赛";
