@@ -171,11 +171,12 @@
 	
 	
 						<article id="mark">
-							<h2 class="major">备忘捏</h2>
+							<h2 class="major">考研倒计时</h2>
 							
-							<h3>考研倒计时</h3>
+							<h3>24考研倒计时</h3>
 							<h1 id="countdown"></h1>
-													
+							<h3>25考研倒计时</h3>
+							<h1 id="next"></h1>
 						</article>
 						
 	
@@ -246,7 +247,8 @@
 					let cur = new Date().getTime();
 					let diff = parseInt((date-cur) / (1000*60*60*24))
 					let content = document.getElementById("countdown").innerHTML
-					document.getElementById("countdown").innerHTML = diff + "天";					
+					document.getElementById("countdown").innerHTML = diff + "天";		
+					document.getElementById("next").innerHTML = (diff+365) + "天";			
 				}
 				
 
