@@ -9,13 +9,10 @@ categories:
 
 > 一些纯前端的小玩意
 
-粗劣地模仿了造梦3地开头小游戏：[Cloud Climbing](https://northboat.github.io/FrontEnd-Toys/)
-
-打卡器：[Clock](https://northboat.github.io/FrontEnd-Toys/clock)
-
-打砖块小游戏：[Knock](https://northboat.github.io/FrontEnd-Toys/knock)
-
-电子木鱼：[Electron Fish](https://northboat.github.io/FrontEnd-Toys/fish)
+- [Cloud Climbing (northboat.github.io)](https://northboat.github.io/WebPages/WuKong/)
+- [打个∠先 (northboat.github.io)](https://northboat.github.io/WebPages/Clock/)
+- [打砖块小游戏 (northboat.github.io)](https://northboat.github.io/WebPages/Knock/)
+- [Electron Fish (northboat.github.io)](https://northboat.github.io/WebPages/Fish/)
 
 ## Cloud Climbing
 
